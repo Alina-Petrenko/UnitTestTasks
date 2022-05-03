@@ -35,7 +35,7 @@ namespace SecondTask
         /// </summary>
         /// <param name="points">Array of points</param>
         /// <returns>Returns an array of segments</returns>
-        protected static Segment[] GetSegments(Point[] points)
+        public static Segment[] GetSegments(Point[] points)
         {
             Segment[] segments = new Segment[points.Length];
             for (int i = 0; i < segments.Length - 1; i++)

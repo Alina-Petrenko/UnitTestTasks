@@ -11,7 +11,7 @@ namespace SecondTask
     {
         public Polygon(Segment[] segments, int Id)
         {
-            this.Segments = new Segment[6];
+            this.Segments = new Segment[segments.Length];
             for (var i = 0; i < segments.Length; i++)
             {
                 this.Segments[i] = segments[i];

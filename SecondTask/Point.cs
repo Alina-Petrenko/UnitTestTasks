@@ -64,7 +64,7 @@ namespace SecondTask
         }
         public static bool operator !=(Point firstPoint, Point secondPoint)
         {
-            if (firstPoint.X != secondPoint.X && firstPoint.Y != secondPoint.Y)
+            if (firstPoint.X != secondPoint.X || firstPoint.Y != secondPoint.Y)
                 return true;
             else
                 return false;
