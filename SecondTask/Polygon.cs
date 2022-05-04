@@ -26,12 +26,7 @@ namespace SecondTask
         public object Clone()
         {
             var newPolygon = (Polygon)this.MemberwiseClone();
-            var segments = new Segment[this.Segments.Length];
-            for (int i = 0; i < this.Segments.Length; i++)
-            {
-                segments[i].FirstPoint = this.Segments[i].FirstPoint;
-            }
-            newPolygon.Segments = segments;
+            newPolygon.Segments = (Segment[])this.Segments.Clone();
             return newPolygon;
         }
 
@@ -157,7 +152,7 @@ namespace SecondTask
                 for (int i = 0; i < firstPolygon.Segments.Length; i++)
                 {
                     polygon.Segments[i].FirstPoint = firstPolygon.Segments[i].FirstPoint - secondPolygon.Segments[i].FirstPoint;
-                    polygon.Segments[i].FirstPoint = firstPolygon.Segments[i].FirstPoint - secondPolygon.Segments[i].FirstPoint;
+                    polygon.Segments[i].SecondPoint = firstPolygon.Segments[i].SecondPoint - secondPolygon.Segments[i].SecondPoint;
                 }
                 return polygon;
             }

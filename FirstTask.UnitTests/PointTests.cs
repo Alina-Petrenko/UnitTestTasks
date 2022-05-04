@@ -34,6 +34,21 @@ namespace SecondTask.UnitTests
         }
 
         [Test]
+        [TestCase(3, 7, 1, 2)]
+        [TestCase(0, -10, 7, 10)]
+        [TestCase(-4, -1, 1, 8)]
+        public void GetHasCode_CreateTwoDifferentObject_AreNotEqual(int firstX, int firstY, int secondX, int secondY)
+        {
+            var firstPoint = new Point(firstX, firstY);
+            var secondPoint = new Point(secondX, secondY);
+
+            var hashCodeFirstPoint = firstPoint.GetHashCode();
+            var hashCodeSecondPoint = secondPoint.GetHashCode();
+
+            Assert.AreNotEqual(hashCodeFirstPoint,hashCodeSecondPoint);
+        }
+
+        [Test]
         [TestCase(3, 7, 3, 7)]
         [TestCase(0, -10, 0, -10)]
         [TestCase(-4, -1, -4, -1)]
@@ -146,6 +161,8 @@ namespace SecondTask.UnitTests
 
             Assert.True(result);
         }
+
+
 
         #endregion
     }

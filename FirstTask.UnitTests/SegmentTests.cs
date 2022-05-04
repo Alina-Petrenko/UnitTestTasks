@@ -72,6 +72,15 @@ namespace SecondTask.UnitTests
             Assert.False(result);
         }
 
+        [Test, TestCaseSource("TestCasesNotEquals")]
+        public void GetHasCode_CreateTwoDifferentObject_AreNotEqual(Segment firstSegment, Segment secondSegment)
+        {
+            var hashCodeFirstSegment = firstSegment.GetHashCode();
+            var hashCodeSecondSegment = secondSegment.GetHashCode();
+
+            Assert.AreNotEqual(hashCodeFirstSegment, hashCodeSecondSegment);
+        }
+
         #endregion
     }
 }

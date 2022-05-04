@@ -275,14 +275,9 @@ namespace SecondTask
         /// <returns>Returns the cloned object</returns>
         public new object Clone()
         {
-            var newHexagon = (Hexagon)this.MemberwiseClone();
-            var segments = new Segment[this.Segments.Length];
-            for (int i = 0; i < this.Segments.Length; i++)
-            {
-                segments[i].FirstPoint = this.Segments[i].FirstPoint;
-            }
-            newHexagon.Segments = segments;
-            return newHexagon;
+            var newPolygon = (Hexagon)this.MemberwiseClone();
+            newPolygon.Segments = (Segment[])this.Segments.Clone();
+            return newPolygon;
         }
 
         /// <summary>
