@@ -38,6 +38,7 @@ namespace SecondTask.UnitTests
         [Test, TestCaseSource("TestCases")]
         public void Segment_SetToFieldsValue_ValueHasBeenSet(Point firstPoint, Point secondPoint)
         {
+            // TODO: could be declared with object creation in 44 line
             Segment segment;
 
             segment = new Segment(firstPoint, secondPoint);

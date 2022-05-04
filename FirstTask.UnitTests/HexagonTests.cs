@@ -163,6 +163,7 @@ namespace SecondTask.UnitTests
 
         #region Tests
 
+        // TODO: before
         [Test, TestCaseSource("TestCasesSegments")]
         public void Hexagon_SetToFieldsValue_ValueHasBeenSet(Segment[] segments)
         {
@@ -173,7 +174,31 @@ namespace SecondTask.UnitTests
             Assert.AreEqual(segments, hexagon.Segments);
             Assert.AreEqual(id, hexagon.Id);
         }
+        
+        // TODO: After
+        // TODO: 1. Name of method should be as in template:
+        // TODO: {NameOfMethod}_{InputData}_{ExpectedOutput}
+        // TODO: 2. Always clarify Act, Arrange, Assert sections
+        // TODO: 3. Add summary to tests too (if nothing to explain then just copy the name of method
+        // TODO: 4. Use const whenever where it could be used inside method.
+        /// <summary>
+        /// Constructor_ValidData_ExpectedObjectCreated
+        /// </summary>
+        /// <param name="segments">Lines to create a geometric object</param>
+        [Test, TestCaseSource("TestCasesSegments")]
+        public void Constructor_ValidData_ExpectedObjectCreated(Segment[] segments)
+        {
+            // Act
+            const int id = 1;
 
+            // Arrange
+            var hexagon = new Hexagon(segments, id);
+
+            // Assert
+            Assert.AreEqual(segments, hexagon.Segments);
+            Assert.AreEqual(id, hexagon.Id);
+        }
+        
         [Test]
         public void GetRandomCoordinatesForHexagon_GetRandomCoordinates_ReturnsCoordinatesWithoutLineCross()
         {
@@ -183,6 +208,7 @@ namespace SecondTask.UnitTests
             Assert.AreNotEqual(firstSegments, secondSegments);
         }
 
+        // TODO: Rename into GetArea_ValidHexagon_ExpectedCalculatedArea
         [Test, TestCaseSource("TestCasesGetArea")]
         public void GetArea_GetHexagonArea_ReturnsHexagonArea((Hexagon firstHexagon, double expectedArea) tuple)
         {
@@ -278,6 +304,7 @@ namespace SecondTask.UnitTests
             Hexagon hexagon = segments;
 
             Assert.IsInstanceOf<Hexagon>(hexagon);
+            Assert.AreEqual(4, hexagon.Id);
         }
 
         #endregion

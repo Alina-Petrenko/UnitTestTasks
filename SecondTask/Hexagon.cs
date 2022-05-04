@@ -9,10 +9,13 @@ namespace SecondTask
     /// </summary>
     public class Hexagon : Polygon, IComparable, ICloneable
     {
+        // TODO: parameter "Id" should be renamed into "id".
+        // TODO: all the input parameters should always be in camel case 
         public Hexagon(Segment[] segments, int Id) : base(segments, Id)
         {
             if (segments.Length != 6)
             {
+                // TODO: not covered by unit tests
                 throw new InvalidOperationException("Wrong count of sides.");
             }
 

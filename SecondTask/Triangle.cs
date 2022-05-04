@@ -13,6 +13,7 @@ namespace SecondTask
         {
             if (segments.Length != 3)
             {
+                // TODO: not covered by unit tests
                 throw new InvalidOperationException("Wrong count of sides.");
             }
             this.Segments = new Segment[3];
@@ -112,6 +113,7 @@ namespace SecondTask
         public new int CompareTo(object obj)
         {
             if (!(obj is Triangle))
+                // TODO: not covered by unit tests
                 throw new ArgumentException("Object is not a Triangle");
             Triangle triangle = (Triangle)obj;
             var firstTriangle = this.GetArea();

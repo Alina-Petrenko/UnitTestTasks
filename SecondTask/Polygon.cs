@@ -39,6 +39,7 @@ namespace SecondTask
         public int CompareTo(object obj)
         {
             if (!(obj is Polygon))
+                // TODO: not covered by unit tests
                 throw new ArgumentException("Object is not a Polygon");
             Polygon polygon = (Polygon)obj;
             var firstPolygon = GetArea();
@@ -119,6 +120,7 @@ namespace SecondTask
             polygon.Segments = new Segment[firstPolygon.Segments.Length];
             if (firstPolygon.Segments.Length != secondPolygon.Segments.Length)
             {
+                // TODO: not covered by unit tests
                 throw new InvalidOperationException("Different count of sides.");
             }
             else
@@ -145,6 +147,7 @@ namespace SecondTask
             polygon.Segments = new Segment[firstPolygon.Segments.Length];
             if (firstPolygon.Segments.Length != secondPolygon.Segments.Length)
             {
+                // TODO: not covered by unit tests
                 throw new InvalidOperationException("Different count of sides.");
             }
             else
@@ -171,6 +174,7 @@ namespace SecondTask
             polygon.Segments = new Segment[firstPolygon.Segments.Length];
             if (firstPolygon.Segments.Length != secondPolygon.Segments.Length)
             {
+                // TODO: not covered by unit tests
                 throw new InvalidOperationException("Different count of sides.");
             }
             else
@@ -203,6 +207,7 @@ namespace SecondTask
             polygon.Segments = new Segment[firstPolygon.Segments.Length];
             if (firstPolygon.Segments.Length != secondPolygon.Segments.Length)
             {
+                // TODO: not covered by unit tests
                 throw new InvalidOperationException("Different count of sides.");
             }
             else
