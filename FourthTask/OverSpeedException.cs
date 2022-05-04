@@ -8,6 +8,7 @@ namespace FourthTask
     public class OverSpeedException : Exception
     {
         #region Public Methods
+
         /// <summary>
         /// Returns an error message
         /// </summary>
@@ -16,6 +17,7 @@ namespace FourthTask
         {
             Console.WriteLine($"Over speed for animal: {speed}. Expected limit: 80");
         }
+
         #endregion
     }
 }

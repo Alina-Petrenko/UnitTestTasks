@@ -8,6 +8,7 @@ namespace FourthTask
     public class Panther : Animal, IRunnable
     {
         #region Properties
+
         /// <summary>
         /// Start Time
         /// </summary>
@@ -17,9 +18,11 @@ namespace FourthTask
         /// End Time
         /// </summary>
         public DateTime EndTime { get; set; }
+
         #endregion
 
         #region Constructors
+
         /// <summary>
         /// Sets the initial value
         /// </summary>
@@ -44,9 +47,11 @@ namespace FourthTask
                 StartTime = startTime;
             }
         }
+
         #endregion
 
         #region Public Methods
+
         /// <summary>
         /// Calculates distance covered
         /// </summary>
@@ -76,6 +81,7 @@ namespace FourthTask
                 return speed;
             }
         }
+
         #endregion
     }
 }

@@ -8,6 +8,7 @@ namespace FourthTask
     public interface IMobile
     {
         #region Public Methods
+
         /// <summary>
         /// Calculates distance covered
         /// </summary>
@@ -15,6 +16,7 @@ namespace FourthTask
         /// <param name="time">Time</param>
         /// <returns>Returns distance covered</returns>
         public double DistanceCalculation(int speed, TimeSpan time);
+
         #endregion
     }
 }

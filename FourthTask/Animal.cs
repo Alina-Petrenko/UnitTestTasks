@@ -27,6 +27,7 @@ namespace FourthTask
         /// Maximum speed
         /// </summary>
         private int _speed;
+
         #endregion
 
         #region Properties
@@ -79,6 +80,7 @@ namespace FourthTask
                 _speed = value;
             }
         }
+
         #endregion
 
         #region Public methods
@@ -90,6 +92,7 @@ namespace FourthTask
         /// <returns>Returns speed</returns>
         /// <exception cref="OverSpeedException">Thrown when animal tried to over speed</exception>
         public abstract int SpeedCheck(int speed);
+
         #endregion
     }
 }

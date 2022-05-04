@@ -8,6 +8,7 @@ namespace FourthTask
     public interface IRunnable: IMobile
     {
         #region Properties
+
         /// <summary>
         /// Start Time
         /// </summary>
@@ -17,6 +18,7 @@ namespace FourthTask
         /// End Time
         /// </summary>
         public DateTime EndTime { get; set; }
+
         #endregion
     }
 }

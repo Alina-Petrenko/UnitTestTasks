@@ -9,20 +9,25 @@ namespace FourthTask
     public class Bird: Animal, IFlyable
     {
         #region Fields
+
         /// <summary>
         /// Stopwatch
         /// </summary>
         private Stopwatch _stopwatch = new Stopwatch();
+
         #endregion
 
         #region Properties
+
         /// <summary>
         /// Is bird in sky
         /// </summary>
         public bool InSky { get; set; }
+
         #endregion
 
         #region Constructors
+
         /// <summary>
         /// Sets the initial value
         /// </summary>
@@ -39,9 +44,11 @@ namespace FourthTask
             Speed = SpeedCheck(speed);
             InSky = false;
         }
+
         #endregion
 
         #region Public Methods
+
         /// <summary>
         /// Represents the state change of the bird to "in Sky"
         /// </summary>
@@ -93,6 +100,7 @@ namespace FourthTask
                 return speed;
             }
         }
+
         #endregion
     }
 }
