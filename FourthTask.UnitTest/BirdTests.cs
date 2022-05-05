@@ -120,6 +120,7 @@ namespace FourthTask.UnitTest
             Assert.AreEqual(speed, bird.Speed);
         }
 
+        // TODO: Before
         /// <summary>
         /// Catch exception after setting invalid data
         /// </summary>
@@ -132,6 +133,36 @@ namespace FourthTask.UnitTest
         {
             // Act & Arrange & Assert
             Assert.Throws<OverSpeedException>(() => new Bird("Bird", 4, Gender.Male, speed));
+        }
+        
+        // TODO: After
+        // TODO: 1. Speed parameter is described
+        // TODO: 2. Changed name of method
+        // TODO: 3. Created const-s
+        // TODO: 4. Save exception variable to check it in Assert section
+        /// <summary>
+        /// SpeedCheck_InvalidData_ExpectedException
+        /// </summary>
+        /// <param name="speed">Speed of bird</param>
+        [Test]
+        [TestCase(81)]
+        [TestCase(83)]
+        [TestCase(105)]
+        public void SpeedCheck_InvalidSpeed_ExpectedOverSpeedException(int speed)
+        {
+            // Arrange 
+            const string name = "Bird";
+            const int age = 4;
+            const Gender gender = Gender.Male;
+            
+            var expectedExceptionMessage = $"Over speed for animal: {speed}. Expected limit: 80";
+            
+            // Act
+            var exception = Assert.Throws<OverSpeedException>(() => new Bird(name, age, gender, speed));
+            
+            // Assert
+            Assert.IsNotNull(exception);
+            Assert.AreEqual(expectedExceptionMessage, exception!.Message);
         }
 
         #endregion

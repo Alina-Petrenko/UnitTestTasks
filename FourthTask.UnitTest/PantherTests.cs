@@ -78,6 +78,7 @@ namespace FourthTask.UnitTest
         [Test, TestCaseSource("TestCasesTime")]
         public void Constructor_InvalidData_ExpectedException((DateTime start, DateTime end) tuple)
         {
+            // TODO: provided example how it should looks like in BirdTests.
             // Act & Arrange & Assert
             Assert.Throws<ArgumentOutOfRangeException>(() => new Panther("Panther", 7, Gender.Male, 40, tuple.start, tuple.end));
         }

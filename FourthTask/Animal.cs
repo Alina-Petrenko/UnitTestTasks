@@ -57,6 +57,7 @@ namespace FourthTask
             {
                 if (value <= 0)
                 {
+                    // TODO: Not covered by unit tests
                     throw new ArgumentOutOfRangeException(nameof(Age));
                 }
 
@@ -74,6 +75,7 @@ namespace FourthTask
             {
                 if (value <= 0)
                 {
+                    // TODO: Not covered by unit tests
                     throw new ArgumentOutOfRangeException(nameof(Speed));
                 }
 
